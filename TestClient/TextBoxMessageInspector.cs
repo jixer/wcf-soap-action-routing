@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
+﻿using System.IO;
 using System.ServiceModel;
 using System.ServiceModel.Dispatcher;
 using System.Text;
@@ -11,6 +8,9 @@ using Message = System.ServiceModel.Channels.Message;
 
 namespace BBC.Practice.WCF.Routing.Test
 {
+    // The implementation code here is fairly dirty, so don't attempt to replicate the logic for anything other than 
+    // testing purposes.  Furthermore, custom EndpointBehaviors and MessageClientInspectors
+    // are beyond the scope of this tutorial, so I will not go into the details of these
     class TextBoxMessageInspector : IClientMessageInspector
     {
         private TextBox _requestTextBox;
